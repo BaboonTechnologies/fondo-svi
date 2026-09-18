@@ -10,12 +10,15 @@ COPY . .
 
 RUN npm run build
 
-FROM nginx:alpine
+FROM node:20-alpine
 
-COPY --from=builder /app/dist /usr/share/nginx/html
+WORKDIR /app
 
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY --from=builder /app/dist ./dist
+COPY --from=builder /app/api ./api
+COPY --from=builder /app/server.mjs ./server.mjs
 
-EXPOSE 5173
+ENV PORT=8080
+EXPOSE 8080
 
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["node", "server.mjs"]
