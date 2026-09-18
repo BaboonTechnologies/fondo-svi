@@ -4,7 +4,6 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "rewrites": [
-    { "source": "/go/:path*", "destination": "https://go.services.svinvesting.com/site/fund.svinvesting.com/go/:path*" },
     { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
