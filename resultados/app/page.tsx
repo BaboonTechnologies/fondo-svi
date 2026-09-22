@@ -29,7 +29,7 @@ export default function Home() {
     <main className="min-h-screen bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-6 sm:py-10 md:py-12">
         <div className="mb-6 flex justify-end animate-fadeIn">
-          <a href="/documents/reporte_SVI_Junio_2026.pdf" download="Reporte SVI - Junio 2026.pdf">
+          <a href="https://reports.svinvesting.com/ultimo-reporte" target="_blank" rel="noopener noreferrer">
             <Button className="h-auto max-w-full whitespace-normal px-5 py-4 text-sm sm:px-8 sm:text-base font-semibold text-white shadow-md transition-all duration-300 hover:scale-105 hover:shadow-xl" style={{ backgroundColor: 'var(--svi-primary)' }}>
               <Download className="mr-2 h-5 w-5" />
               Descarga Reporte Completo (PDF)
@@ -187,7 +187,7 @@ export default function Home() {
         </div>
 
         <div className="mt-8 text-center animate-fadeIn animate-delay-300">
-          <a href="/documents/reporte_SVI_Junio_2026.pdf" download="Reporte SVI - Junio 2026.pdf">
+          <a href="https://reports.svinvesting.com/ultimo-reporte" target="_blank" rel="noopener noreferrer">
             <Button className="h-auto max-w-full whitespace-normal px-5 py-4 text-base sm:px-8 sm:text-lg font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl" style={{ backgroundColor: 'var(--svi-primary)' }}>
               <Download className="mr-2 h-6 w-6" />
               Descarga Reporte Completo (PDF)
