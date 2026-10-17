@@ -84,6 +84,12 @@ Los widgets dinámicos leen de **funciones serverless propias** que consultan fu
 - Para publicar el reporte de un mes, **suelta el PDF** en `resultados/public/documents/` con el nombre exacto:
   **`reporte_SVI_<Mes>_<Año>.pdf`** (ej. `reporte_SVI_Julio_2026.pdf`). El archivo histórico se actualiza solo vía `/api/reports`.
 - El botón **"Descarga Reporte Completo (PDF)"** de la navbar apunta a `https://www.svinvesting.com/ultimo-reporte`, que es una URL **externa** (dominio de marketing, gestionado FUERA de este repo). Si cambia, se actualiza en `src/components/Navigation.tsx` y `src/components/ReportCTA.tsx`.
+- **Backup de los reportes:** el bucket R2 `svi-reports` (servido en `reports.svinvesting.com`) se
+  copia cada día a las 05:30 (Europe/Madrid) a Backblaze `baboon-backups/fondo-svi-reports`
+  (solo añade, nunca borra). Vive **fuera de este repo**: Dokploy baboon (workspace Baboon) →
+  proyecto **SVI** → compose **"Reports Backup"** (rclone) + Scheduled job, con push a Uptime Kuma
+  ("SVI Backups Fondo Reportes"). Credenciales como env del compose en Dokploy (token R2 de solo
+  lectura en 1Password: "Cloudflare R2 - svi-reports read-only (S3)").
 
 ## 7. Formularios de contacto
 
