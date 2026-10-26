@@ -10,15 +10,15 @@ import { FundFeatures } from '@/components/factsheet/FundFeatures';
 import { DistributorTable } from '@/components/factsheet/DistributorTable';
 import { TextSection } from '@/components/factsheet/TextSection';
 import { Footer } from '@/components/factsheet/Footer';
-import { HistoricalBacktesting } from '@/components/factsheet/HistoricalBacktesting';
+// import { HistoricalBacktesting } from '@/components/factsheet/HistoricalBacktesting';
 // import { HistoricalBenchmark } from '@/components/factsheet/HistoricalBenchmark';
 import { LiveQuoteCard } from '@/components/factsheet/LiveQuoteCard';
 import { ReportsArchive } from '@/components/factsheet/ReportsArchive';
 // import { MetricsCards } from '@/components/factsheet/MetricsCards';
-import { ComparisonTables } from '@/components/factsheet/ComparisonTables';
-import { BuffettStatsSection } from '@/components/factsheet/BuffettStatsSection';
-import { TrackRecordSection } from '@/components/factsheet/TrackRecordSection';
-import { CurrentInvestments } from '@/components/factsheet/CurrentInvestments';
+// import { ComparisonTables } from '@/components/factsheet/ComparisonTables';
+// import { BuffettStatsSection } from '@/components/factsheet/BuffettStatsSection';
+// import { TrackRecordSection } from '@/components/factsheet/TrackRecordSection';
+// import { CurrentInvestments } from '@/components/factsheet/CurrentInvestments';
 import { ContactSection } from '@/components/factsheet/ContactSection';
 // import { DiversificationGrid } from '@/components/factsheet/DiversificationGrid';
 import { Button } from '@/components/ui/button';
@@ -95,21 +95,21 @@ export default function Home() {
             <DistributorTable info={factsheetData.distributorInfo} />
           </div>
 
-          <div className="animate-fadeIn animate-delay-175">
+          {/* <div className="animate-fadeIn animate-delay-175">
             <TrackRecordSection />
-          </div>
+          </div> */}
 
-          <div className="animate-fadeIn animate-delay-175">
+          {/* <div className="animate-fadeIn animate-delay-175">
             <CurrentInvestments />
-          </div>
+          </div> */}
 
-          <div className="animate-fadeIn animate-delay-175">
+          {/* <div className="animate-fadeIn animate-delay-175">
             <HistoricalBacktesting />
-          </div>
+          </div> */}
 
-          <div className="animate-fadeIn animate-delay-175">
+          {/* <div className="animate-fadeIn animate-delay-175">
             <BuffettStatsSection />
-          </div>
+          </div> */}
 
           {/* <div className="animate-fadeIn animate-delay-200">
             <HistoricalBenchmark />
@@ -132,9 +132,9 @@ export default function Home() {
             </div>
           </div> */}
 
-          <div className="animate-fadeIn animate-delay-235">
+          {/* <div className="animate-fadeIn animate-delay-235">
             <ComparisonTables />
-          </div>
+          </div> */}
 
           <div className="animate-fadeIn animate-delay-240 mt-12">
             <ContactSection />
